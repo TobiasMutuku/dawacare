@@ -1,0 +1,83 @@
+{% load static %}
+<head>
+<!--FONT AWESOME-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--GOOGLE FONTS-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+<footer>
+<div class="footer">
+<div class="row">
+<ul>
+    
+<li> <li style="font-size:24px ; text-align: left; text-decoration:#008891 ;">Welcome, {{ request.user.username }}</li>
+<li style="float: right;"><img id="profile" src="{% static 'profile.png' %}" width="60px" height="60px"><a  class="button" href="{% url 'logout' %}">Logout</a></li>
+</ul>
+
+
+</div>
+</div>
+
+</footer>
+
+
+<style type="text/css">
+body{
+margin:0;
+overflow-x:hidden;
+}
+
+.footer{
+background-color: #042A3B;
+font-family: 'Play', sans-serif;
+font-size: 24px;
+padding: 20px 20px;
+}
+
+.footer .row{
+width:90%;
+font-size:0.8em;
+}
+
+.footer .row a{
+text-decoration:none;
+color:white;
+transition:0.5s;
+}
+
+.footer .row a:hover{
+color:rgb(114, 89, 89);
+}
+
+.footer .row ul{
+width:100%;
+}
+
+.footer .row a i{
+font-size:2em;
+margin:0% 1%;
+}
+
+@media (max-width:720px){
+.footer{
+text-align:right;
+padding:5%;
+}
+.footer .row ul li{
+display:block;
+margin:10px 0px;
+text-align:right;
+}
+.footer .row a i{
+margin:0% 3%;
+}
+}
+#logo{
+border-radius: 25px;
+}
+#profile{border-radius: 50%;}
+</style>

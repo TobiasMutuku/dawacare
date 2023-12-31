@@ -1,0 +1,29 @@
+{% load static %}
+<div class="head">
+    <div class="logo">
+        <img style src="{% static 'logo.png' %}" width="80px" height="80px">
+        <h2>DawaCare</h2>
+    </div>
+    <div class="profile">
+        <p>Admin</p>
+        <img src="{% static 'logo.png' %}" width="80px" height="80px">  
+    </div>
+</div>
+
+<style>
+  .head{
+background-color: #278872;
+padding:30px 0px;
+font-family: 'Play', sans-serif;
+font-size: 24px;
+text-align: center;
+  }
+   .profile{
+    border-radius: 50%;
+    float: right;
+  }
+  .logo{
+    float: left;
+  }
+
+</style>
